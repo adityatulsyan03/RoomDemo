@@ -11,7 +11,6 @@ interface ContactDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertContact(contact: Contact): Long
 
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertContactAge(contactAge: ContactAge)
 
