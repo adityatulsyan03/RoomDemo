@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.roomdemo.dao.ContactDao
+import com.example.roomdemo.dao.DatabaseDao
 import com.example.roomdemo.dao.GroupDao
 import com.example.roomdemo.entities.Contact
 import com.example.roomdemo.entities.ContactAge
@@ -20,6 +21,7 @@ import com.example.roomdemo.entities.PhoneNumber
 abstract class AppDatabase : RoomDatabase() {
     abstract fun contactDao(): ContactDao
     abstract fun groupDao(): GroupDao
+    abstract fun databaseDao(): DatabaseDao
 
     companion object {
         @Volatile
